@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <ImageButton
+        android:id="@+id/btnEjercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:onClick="entrarEjercicios"
+        android:src="@drawable/iconoejer" />
+
+    <TextView
+        android:id="@+id/txtEjercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEjercicio"
+        android:paddingLeft="30dp"
+        android:text="EJERCICIOS"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btnEntrenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:onClick="entrarEntrenamientos"
+        android:src="@drawable/iconoent" />
+
+    <TextView
+        android:id="@+id/txtEntrenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEntrenamiento"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10px"
+        android:text="ENTRENAMIENTOS"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="volver"
+        android:text="CERRAR SESION" />
+</RelativeLayout>

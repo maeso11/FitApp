@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fitapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitApp">
+        <activity android:name=".DetalleEjer"></activity>
+        <activity
+            android:name=".Ent_FullBody"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ent_Pierna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ent_EspaldaBiceps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ent_PechoTriceps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Pierna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Biceps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Triceps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Hombro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Espalda"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejer_Pecho"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Entrenamientos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ejercicios"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inicio"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
