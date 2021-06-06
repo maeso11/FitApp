@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -23,6 +24,7 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
     SQLiteDatabase db;
     SQLiteHelper helper;
     ListView lv;
+    TextView titulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,14 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        titulo = findViewById(R.id.titulo);
+
+        helper = new SQLiteHelper(this);
+        db = helper.getReadableDatabase();
 
         lv = findViewById(R.id.listaEjer);
 
-        consultaPecho();
+        consultaZona();
 
         lv.setOnItemClickListener(this);
     }
@@ -68,11 +74,13 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
         startActivity(i);
     }
 
-    private void consultaPecho() {
-        helper = new SQLiteHelper(this);
+    private void consultaZona() {
 
-        db = helper.getReadableDatabase();
-        Cursor cursor = db.query(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, null, "Pecho", null, null, null, null);
+        String nombreTitulo = getIntent().getStringExtra("zona");
+        titulo.setText(nombreTitulo);
+        String consulta = "zona = '" + getIntent().getStringExtra("zona") + "'";
+
+        Cursor cursor = db.query(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, null, consulta, null, null, null, null);
 
         String[] from = {EstructuraBBDD.EstructuraEjercicios.COLUMN_NAME_NOMBREEJER};
         int[] to = {R.id.nombreEjer};
@@ -94,4 +102,5 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
 
         vistaEjercicio();
     }
+
 }

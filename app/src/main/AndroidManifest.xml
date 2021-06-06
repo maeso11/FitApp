@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fitapp">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,21 +24,6 @@
             android:name=".Ent_PechoTriceps"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Ejer_Pierna"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ejer_Biceps"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ejer_Triceps"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ejer_Hombro"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ejer_Espalda"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Ejer_Pecho"
             android:screenOrientation="portrait" />
         <activity
@@ -47,12 +33,13 @@
             android:name=".Ejercicios"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Menu"
+            android:name=".MenuInicio"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Inicio"
             android:screenOrientation="portrait">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

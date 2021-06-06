@@ -41,7 +41,7 @@ public class EstructuraBBDD {
         public static final String COLUMN_NAME_NOMBREENT = "nombreEntrenamiento";
         public static final String COLUMN_NAME_SERIE = "serie";
         public static final String COLUMN_NAME_REP = "repeticiones";
-        public static final String COLUMN_NAME_EJER = "nombreEntrenamiento";
+        public static final String COLUMN_NAME_EJER = "nombre";
     }
 
 }

@@ -14,6 +14,7 @@ import android.view.View;
 public class Ejercicios extends AppCompatActivity {
 
     Toolbar toolbar;
+    Intent i = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,32 +53,38 @@ public class Ejercicios extends AppCompatActivity {
 
 
     public void entrarBiceps (View view){
-        Intent i = new Intent(this, Ejer_Biceps.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Bíceps");
         startActivity(i);
     }
 
     public void entrarEspalda (View view){
-        Intent i = new Intent(this, Ejer_Espalda.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Espalda");
         startActivity(i);
     }
 
     public void entrarHombro (View view){
-        Intent i = new Intent(this, Ejer_Hombro.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Hombro");
         startActivity(i);
     }
 
     public void entrarPecho (View view){
-        Intent i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Pecho");
         startActivity(i);
     }
 
     public void entrarPierna (View view){
-        Intent i = new Intent(this, Ejer_Pierna.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Pierna");
         startActivity(i);
     }
 
     public void entrarTriceps (View view){
-        Intent i = new Intent(this, Ejer_Triceps.class);
+        i = new Intent(this, Ejer_Pecho.class);
+        i.putExtra("zona", "Tríceps");
         startActivity(i);
     }
 }

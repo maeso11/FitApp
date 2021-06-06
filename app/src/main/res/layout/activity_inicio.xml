@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:ems="9"
-        android:hint="Introduzca altura"
+        android:hint="Introduzca altura(cm)"
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="20sp" />
@@ -51,7 +51,7 @@
         android:layout_below="@id/edtAltura"
         android:layout_centerHorizontal="true"
         android:ems="9"
-        android:hint="Introduzca peso"
+        android:hint="Introduzca peso(kg)"
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="20sp" />

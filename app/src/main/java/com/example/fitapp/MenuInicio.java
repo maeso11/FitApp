@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Menu extends AppCompatActivity {
+public class MenuInicio extends AppCompatActivity {
 
     Button cerrarSesion;
 
@@ -16,7 +16,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu_inicio);
 
         cerrarSesion = findViewById(R.id.btnCerrarSesion);
     }

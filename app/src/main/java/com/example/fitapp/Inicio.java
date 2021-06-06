@@ -32,6 +32,10 @@ public class Inicio extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         acceder = findViewById(R.id.btnEntrar);
+        helper = new SQLiteHelper(this);
+        db = helper.getWritableDatabase();
+
+        db.delete(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, "_id>1", null);
 
         insertaEjer("Press banca", "Pecho", "https://www.youtube.com/watch?v=7aQY3u0Dk-Q&ab_channel=Powerexplosive");
         insertaEjer("Press banca inclinado", "Pecho", "https://www.youtube.com/watch?v=swMjJqFzxCQ&ab_channel=FNTLifeFNTLifeVerificada");
@@ -71,7 +75,7 @@ public class Inicio extends AppCompatActivity {
 
     //Funciones desplazamiento entre vistas
     public void entrar (View view){
-        Intent i = new Intent(this, Menu.class);
+        Intent i = new Intent(this, MenuInicio.class);
         startActivity(i);
     }
 }
