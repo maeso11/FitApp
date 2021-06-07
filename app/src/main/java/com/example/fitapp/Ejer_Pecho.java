@@ -25,6 +25,7 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
     SQLiteHelper helper;
     ListView lv;
     TextView titulo;
+    Intent i = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
     }
 
     public void vistaEjercicio(){
-        Intent i = new Intent(this, DetalleEjer.class);
+        i = new Intent(this, DetalleEjer.class);
         startActivity(i);
     }
 
@@ -98,7 +99,7 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
         String nombre = cursor.getString(1);
         String zona = cursor.getString(2);
         String enlace = cursor.getString(3);
-
+        i.putExtra("idVideo", enlace);
 
         vistaEjercicio();
     }

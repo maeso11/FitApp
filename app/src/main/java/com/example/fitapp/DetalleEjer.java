@@ -1,9 +1,14 @@
 package com.example.fitapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -13,8 +18,11 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
 
+    Toolbar toolbar;
     YouTubePlayerView youTubePlayerView;
     String clave = "AIzaSyCOsHbBmeAItrh5jeL5BfmWdB-MQZO-x8k";
+    String idVideo = getIntent().getStringExtra("idVideo");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +30,38 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
 
         youTubePlayerView = findViewById(R.id.video);
         youTubePlayerView.initialize(clave, this);
+
+        toolbar = findViewById(R.id.toolbar);
+        }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.ejercicios){
+            Intent i = new Intent(this, Ejercicios.class);
+            startActivity(i);
+        }else if (id == R.id.entrenamientos){
+            Intent i = new Intent(this, Entrenamientos.class);
+            startActivity(i);
+        }else{
+            Intent i = new Intent(this, Inicio.class);
+            startActivity(i);
+        }
+        return true;
     }
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
         if(!b){
-            youTubePlayer.cueVideo("7aQY3u0Dk-Q&ab");
+            youTubePlayer.cueVideo(idVideo);
         }
     }
 
@@ -43,6 +76,8 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
         }
     }
 
+
+    @Override
     public void onActivityResult (int requestCode, int resultCode, Intent data){
 
         if(resultCode == 1){
@@ -77,5 +112,10 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
     @Override
     public void onSeekTo(int i) {
 
+    }
+
+    public void volver (View view){
+        Intent i = new Intent(this, Ejer_Pecho.class);
+        startActivity(i);
     }
 }

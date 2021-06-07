@@ -37,31 +37,31 @@ public class Inicio extends AppCompatActivity {
 
         db.delete(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, "_id>1", null);
 
-        insertaEjer("Press banca", "Pecho", "https://www.youtube.com/watch?v=7aQY3u0Dk-Q&ab_channel=Powerexplosive");
-        insertaEjer("Press banca inclinado", "Pecho", "https://www.youtube.com/watch?v=swMjJqFzxCQ&ab_channel=FNTLifeFNTLifeVerificada");
-        insertaEjer("Press banca declinado", "Pecho", "https://www.youtube.com/watch?v=NNz3_wUMrvI&ab_channel=MyproteinEspa%C3%B1aMyproteinEspa%C3%B1a");
-        insertaEjer("Aperturas", "Pecho", "https://www.youtube.com/watch?v=xyHdY99F640&ab_channel=HSNstore.comHSNstore.com");
-        insertaEjer("Press militar", "Hombro", "https://www.youtube.com/watch?v=j_Buh54Sb-w&ab_channel=PowerexplosivePowerexplosiveVerificada");
-        insertaEjer("Elevaciones laterales", "Hombro", "https://www.youtube.com/watch?v=hgLpdwMtEEs&ab_channel=Jes%C3%BAsL%C3%B3pezTrainerJes%C3%BAsL%C3%B3pezTrainerVerificada");
-        insertaEjer("Elevación frontal", "Hombro", "https://www.youtube.com/watch?v=qIxtugfMI-E&ab_channel=MyproteinEspa%C3%B1aMyproteinEspa%C3%B1a");
-        insertaEjer("Elevación posterior", "Hombro", "https://www.youtube.com/watch?v=zdLlyFb5YDI&ab_channel=FNTLifeFNTLife");
-        insertaEjer("Dominadas", "Espalda", "https://www.youtube.com/watch?v=8mhDd9Ahl1M&ab_channel=CalisTechniXCalisTechniX");
-        insertaEjer("Jalón al pecho", "Espalda", "https://www.youtube.com/watch?v=xpIlNU4qZd8&ab_channel=AnthoniMontalvanAnthoniMontalvanVerificada");
-        insertaEjer("Remo", "Espalda", "https://www.youtube.com/watch?v=I8-nqk81gwI&ab_channel=NinoliftNinolift");
-        insertaEjer("Extensión lumbar", "Espalda", "https://www.youtube.com/watch?v=Dd27xSYbjb8&ab_channel=MUSCULOTUBEMUSCULOTUBE");
-        insertaEjer("Curl bíceps", "Bíceps", "https://www.youtube.com/watch?v=V1qprKjuNV8&ab_channel=MyproteinEspa%C3%B1aMyproteinEspa%C3%B1a");
-        insertaEjer("Curl estilo martillo", "Bíceps", "https://www.youtube.com/watch?v=8ajGwhCkSss&ab_channel=Iv%C3%A1nTamaritIv%C3%A1nTamarit");
-        insertaEjer("Curl concentrado", "Bíceps", "https://www.youtube.com/watch?v=E6idMdmNyxI&ab_channel=AnthoniMontalvanAnthoniMontalvan");
-        insertaEjer("Fondos", "Tríceps", "https://www.youtube.com/watch?v=1Vm1ATIi0AE&ab_channel=PowerexplosivePowerexplosiveVerificada");
-        insertaEjer("Extensiones con mancuernas", "Tríceps", "https://www.youtube.com/watch?v=rIlb_t6SVf0&ab_channel=Team.0lympusTeam.0lympus");
-        insertaEjer("Polea tríceps", "Tríceps", "https://www.youtube.com/watch?v=FspY_qJBXZc&ab_channel=PowerexplosivePowerexplosive");
-        insertaEjer("Extensión cuádriceps", "Pierna", "https://www.youtube.com/watch?v=r7ZMTzfiICA&ab_channel=FNTLifeFNTLifeVerificada");
-        insertaEjer("Sentadilla", "Pierna", "https://www.youtube.com/watch?v=0rgiePufo0A&ab_channel=Powerexplosive");
-        insertaEjer("Prensa", "Pierna", "https://www.youtube.com/watch?v=bKcV1I5rB_g&ab_channel=AnthoniMontalvan");
-        insertaEjer("Peso muerto", "Pierna", "https://www.youtube.com/watch?v=7_Wm0YGQinw&ab_channel=Powerexplosive");
-        insertaEjer("Zancada", "Pierna", "https://www.youtube.com/watch?v=U2lK6PaJ0kA&ab_channel=AnthoniMontalvan");
-        insertaEjer("Curl femoral", "Pierna", "https://www.youtube.com/watch?v=trEvYnS_tQg&ab_channel=Kardagar%2aCoachingforLife");
-        insertaEjer("Elevación de gemelos", "Pierna", "https://www.youtube.com/watch?v=S5amyzoG1O4&ab_channel=MUSCULOTUBEMUSCULOTUBE");
+        insertaEjer("Press banca", "Pecho", "7aQY3u0Dk-Q&ab");
+        insertaEjer("Press banca inclinado", "Pecho", "swMjJqFzxCQ&ab");
+        insertaEjer("Press banca declinado", "Pecho", "NNz3_wUMrvI&ab");
+        insertaEjer("Aperturas", "Pecho", "xyHdY99F640&ab");
+        insertaEjer("Press militar", "Hombro", "j_Buh54Sb-w&ab");
+        insertaEjer("Elevaciones laterales", "Hombro", "hgLpdwMtEEs&ab");
+        insertaEjer("Elevación frontal", "Hombro", "qIxtugfMI-E&ab");
+        insertaEjer("Elevación posterior", "Hombro", "zdLlyFb5YDI&ab");
+        insertaEjer("Dominadas", "Espalda", "8mhDd9Ahl1M&ab");
+        insertaEjer("Jalón al pecho", "Espalda", "xpIlNU4qZd8&ab");
+        insertaEjer("Remo", "Espalda", "I8-nqk81gwI&ab");
+        insertaEjer("Extensión lumbar", "Espalda", "Dd27xSYbjb8&ab");
+        insertaEjer("Curl bíceps", "Bíceps", "V1qprKjuNV8&ab");
+        insertaEjer("Curl estilo martillo", "Bíceps", "8ajGwhCkSss&ab");
+        insertaEjer("Curl concentrado", "Bíceps", "E6idMdmNyxI&ab");
+        insertaEjer("Fondos", "Tríceps", "1Vm1ATIi0AE&ab");
+        insertaEjer("Extensiones con mancuernas", "Tríceps", "rIlb_t6SVf0&ab");
+        insertaEjer("Polea tríceps", "Tríceps", "FspY_qJBXZc&ab");
+        insertaEjer("Extensión cuádriceps", "Pierna", "r7ZMTzfiICA&ab");
+        insertaEjer("Sentadilla", "Pierna", "0rgiePufo0A&ab");
+        insertaEjer("Prensa", "Pierna", "bKcV1I5rB_g&ab");
+        insertaEjer("Peso muerto", "Pierna", "7_Wm0YGQinw&ab");
+        insertaEjer("Zancada", "Pierna", "U2lK6PaJ0kA&ab");
+        insertaEjer("Curl femoral", "Pierna", "trEvYnS_tQg&ab");
+        insertaEjer("Elevación de gemelos", "Pierna", "S5amyzoG1O4&ab");
 
     }
 
