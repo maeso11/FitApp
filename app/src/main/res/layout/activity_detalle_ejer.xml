@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/datos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
@@ -26,14 +26,6 @@
         android:layout_height="wrap_content" >
 
     </com.google.android.youtube.player.YouTubePlayerView>
-
-    <ImageButton
-        android:id="@+id/btnVolver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:onClick="volver"
-        android:src="@drawable/abc_vector_test" />
 
 
 </LinearLayout>

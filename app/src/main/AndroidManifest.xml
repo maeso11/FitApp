@@ -12,9 +12,6 @@
         android:theme="@style/Theme.FitApp">
         <activity android:name=".DetalleEjer"></activity>
         <activity
-            android:name=".Ent_FullBody"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Ent_Pierna"
             android:screenOrientation="portrait" />
         <activity
@@ -24,7 +21,7 @@
             android:name=".Ent_PechoTriceps"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Ejer_Pecho"
+            android:name=".Ejer"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Entrenamientos"

@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class Ejer extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     Toolbar toolbar;
     SQLiteDatabase db;
@@ -31,7 +31,7 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejer__pecho);
+        setContentView(R.layout.activity_ejer);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -58,20 +58,20 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
         int id = item.getItemId();
 
         if (id == R.id.ejercicios){
-            Intent i = new Intent(this, Ejercicios.class);
-            startActivity(i);
+            Intent intent = new Intent(this, Ejercicios.class);
+            startActivity(intent);
         }else if (id == R.id.entrenamientos){
-            Intent i = new Intent(this, Entrenamientos.class);
-            startActivity(i);
+            Intent intent = new Intent(this, Entrenamientos.class);
+            startActivity(intent);
         }else{
-            Intent i = new Intent(this, Inicio.class);
-            startActivity(i);
+            Intent intent = new Intent(this, Inicio.class);
+            startActivity(intent);
         }
         return true;
     }
 
     public void vistaEjercicio(){
-        i = new Intent(this, DetalleEjer.class);
+
         startActivity(i);
     }
 
@@ -99,7 +99,12 @@ public class Ejer_Pecho extends AppCompatActivity implements AdapterView.OnItemC
         String nombre = cursor.getString(1);
         String zona = cursor.getString(2);
         String enlace = cursor.getString(3);
+        String entrenamiento = cursor.getString(4);
+        i = new Intent(this, DetalleEjer.class);
         i.putExtra("idVideo", enlace);
+        i.putExtra("idNombre", nombre);
+        i.putExtra("idZona", zona);
+        i.putExtra("idEnt", entrenamiento);
 
         vistaEjercicio();
     }

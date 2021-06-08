@@ -53,37 +53,37 @@ public class Ejercicios extends AppCompatActivity {
 
 
     public void entrarBiceps (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Bíceps");
         startActivity(i);
     }
 
     public void entrarEspalda (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Espalda");
         startActivity(i);
     }
 
     public void entrarHombro (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Hombro");
         startActivity(i);
     }
 
     public void entrarPecho (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Pecho");
         startActivity(i);
     }
 
     public void entrarPierna (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Pierna");
         startActivity(i);
     }
 
     public void entrarTriceps (View view){
-        i = new Intent(this, Ejer_Pecho.class);
+        i = new Intent(this, Ejer.class);
         i.putExtra("zona", "Tríceps");
         startActivity(i);
     }

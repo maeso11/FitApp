@@ -1,7 +1,6 @@
 package com.example.fitapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
@@ -9,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -21,8 +21,11 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
     Toolbar toolbar;
     YouTubePlayerView youTubePlayerView;
     String clave = "AIzaSyCOsHbBmeAItrh5jeL5BfmWdB-MQZO-x8k";
-    String idVideo = getIntent().getStringExtra("idVideo");
-
+    String idVideo;
+    String idNombre;
+    String idZona;
+    String idEnt;
+    TextView datos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,14 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
         youTubePlayerView.initialize(clave, this);
 
         toolbar = findViewById(R.id.toolbar);
-        }
+        datos = findViewById(R.id.datos);
+        idVideo = getIntent().getStringExtra("idVideo");
+        idNombre = getIntent().getStringExtra("idNombre");
+        idZona = getIntent().getStringExtra("idZona");
+        idEnt = getIntent().getStringExtra("idEnt");
+
+        datos.setText(idNombre + "\n" + idZona + "\n" + idEnt);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -114,8 +124,4 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
 
     }
 
-    public void volver (View view){
-        Intent i = new Intent(this, Ejer_Pecho.class);
-        startActivity(i);
-    }
 }

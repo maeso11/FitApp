@@ -67,8 +67,4 @@ public class Entrenamientos extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void entrarFullBody (View view){
-        Intent i = new Intent(this, Ent_FullBody.class);
-        startActivity(i);
-    }
 }
