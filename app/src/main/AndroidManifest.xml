@@ -12,13 +12,10 @@
         android:theme="@style/Theme.FitApp">
         <activity android:name=".DetalleEjer"></activity>
         <activity
-            android:name=".Ent_Pierna"
+            android:name=".DetalleEnt"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Ent_EspaldaBiceps"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ent_PechoTriceps"
+            android:name=".Ent"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Ejer"

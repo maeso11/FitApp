@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Ent_EspaldaBiceps extends AppCompatActivity {
+public class DetalleEnt extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -18,7 +18,7 @@ public class Ent_EspaldaBiceps extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ent__espalda_biceps);
+        setContentView(R.layout.activity_detalle_ent);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

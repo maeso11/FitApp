@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnPecho"
+            android:id="@+id/btnPechoTriceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,7 +68,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnBiceps"
+            android:id="@+id/btnEspaldaBiceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

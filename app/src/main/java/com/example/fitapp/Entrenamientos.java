@@ -10,13 +10,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class Entrenamientos extends AppCompatActivity {
 
     Toolbar toolbar;
-
-
+    Intent i = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +50,21 @@ public class Entrenamientos extends AppCompatActivity {
     }
 
     //Funciones desplazamiento entre vistas
-    public void entrarPechoTriceps (View view){
-        Intent i = new Intent(this, Ent_PechoTriceps.class);
+    public void ent1 (View view){
+        i = new Intent(this, Ent.class);
+        i.putExtra("nombreEntrenamiento", "Pecho/Tríceps");
         startActivity(i);
     }
 
-    public void entrarEspaldaBiceps (View view){
-        Intent i = new Intent(this, Ent_EspaldaBiceps.class);
+    public void ent2 (View view){
+        i = new Intent(this, Ent.class);
+        i.putExtra("nombreEntrenamiento", "Espalda/Bíceps");
         startActivity(i);
     }
 
-    public void entrarPierna (View view){
-        Intent i = new Intent(this, Ent_Pierna.class);
+    public void ent3 (View view){
+        i = new Intent(this, Ent.class);
+        i.putExtra("nombreEntrenamiento", "Pierna");
         startActivity(i);
     }
 

@@ -39,9 +39,8 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
         idVideo = getIntent().getStringExtra("idVideo");
         idNombre = getIntent().getStringExtra("idNombre");
         idZona = getIntent().getStringExtra("idZona");
-        idEnt = getIntent().getStringExtra("idEnt");
 
-        datos.setText(idNombre + "\n" + idZona + "\n" + idEnt);
+        datos.setText(idNombre + "\n" + idZona);
     }
 
     @Override

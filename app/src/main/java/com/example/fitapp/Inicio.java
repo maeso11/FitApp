@@ -38,50 +38,74 @@ public class Inicio extends AppCompatActivity {
         db.delete(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, "_id>=1", null);
         db.delete(EstructuraBBDD.EstructuraEntrenamientos.TABLE_NAME_ENTRENAMIENTOS, "_id>=1", null);
 
-        insertaEnt("Pecho/Tríceps", 4, 10);
-        insertaEnt("Espalda/Bíceps", 4, 10);
-        insertaEnt("Pierna", 4, 10);
+        insertaEnt("Pecho/Tríceps", "Press banca", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Press banca inclinado", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Press banca declinado", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Aperturas", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Press militar", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Elevaciones laterales", "Series: 3", "10 - 10 - 10");
+        insertaEnt("Pecho/Tríceps", "Fondos", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Extensiones con mancuernas", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pecho/Tríceps", "Polea tríceps", "Series: 4", "12 - 10 - 10 - 8");
 
-        insertaEjer("Press banca", "Pecho", "7aQY3u0Dk-Q", "Pecho/Tríceps");
-        insertaEjer("Press banca inclinado", "Pecho", "swMjJqFzxCQ", "Pecho/Tríceps");
-        insertaEjer("Press banca declinado", "Pecho", "NNz3_wUMrvI", "Pecho/Tríceps");
-        insertaEjer("Aperturas", "Pecho", "xyHdY99F640", "Pecho/Tríceps");
-        insertaEjer("Press militar", "Hombro", "j_Buh54Sb-w", "Pecho/Tríceps");
-        insertaEjer("Elevaciones laterales", "Hombro", "hgLpdwMtEEs", "Pecho/Tríceps");
-        insertaEjer("Elevación frontal", "Hombro", "qIxtugfMI-E", "Espalda/Bíceps");
-        insertaEjer("Elevación posterior", "Hombro", "zdLlyFb5YDI", "Espalda/Bíceps");
-        insertaEjer("Dominadas", "Espalda", "8mhDd9Ahl1M", "Espalda/Bíceps");
-        insertaEjer("Jalón al pecho", "Espalda", "xpIlNU4qZd8", "Espalda/Bíceps");
-        insertaEjer("Remo", "Espalda", "I8-nqk81gwI", "Espalda/Bíceps");
-        insertaEjer("Extensión lumbar", "Espalda", "Dd27xSYbjb8", "Espalda/Bíceps");
-        insertaEjer("Curl bíceps", "Bíceps", "V1qprKjuNV8", "Espalda/Bíceps");
-        insertaEjer("Curl estilo martillo", "Bíceps", "8ajGwhCkSss", "Espalda/Bíceps");
-        insertaEjer("Curl concentrado", "Bíceps", "E6idMdmNyxI", "Espalda/Bíceps");
-        insertaEjer("Fondos", "Tríceps", "1Vm1ATIi0AE", "Pecho/Tríceps");
-        insertaEjer("Extensiones con mancuernas", "Tríceps", "rIlb_t6SVf0", "Pecho/Tríceps");
-        insertaEjer("Polea tríceps", "Tríceps", "FspY_qJBXZc", "Pecho/Tríceps");
-        insertaEjer("Extensión cuádriceps", "Pierna", "r7ZMTzfiICA", "Pierna");
-        insertaEjer("Sentadilla", "Pierna", "0rgiePufo0A", "Pierna");
-        insertaEjer("Prensa", "Pierna", "bKcV1I5rB_g", "Pierna");
-        insertaEjer("Peso muerto", "Pierna", "7_Wm0YGQinw", "Pierna");
-        insertaEjer("Zancada", "Pierna", "U2lK6PaJ0kA", "Pierna");
-        insertaEjer("Curl femoral", "Pierna", "trEvYnS_tQg", "Pierna");
-        insertaEjer("Elevación de gemelos", "Pierna", "S5amyzoG1O4", "Pierna");
+        insertaEnt("Espalda/Bíceps", "Dominadas", "Series: 4", "8 - 8 - 8 - 8");
+        insertaEnt("Espalda/Bíceps", "Jalón al pecho", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Espalda/Bíceps", "Remo", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Espalda/Bíceps", "Extensión lumbar", "Series: 4", "12 - 12 - 12 - 12");
+        insertaEnt("Espalda/Bíceps", "Elevación posterior", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Espalda/Bíceps", "Elevación frontal", "Series: 3", "10 - 10 - 10");
+        insertaEnt("Espalda/Bíceps", "Curl bíceps", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Espalda/Bíceps", "Curl estilo martillo", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Espalda/Bíceps", "Curl concentrado", "Series: 4", "12 - 10 - 10 - 8");
+
+        insertaEnt("Pierna", "Sentadilla", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Extensión cuádriceps", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Prensa", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Peso muerto", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Zancada", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Curl femoral", "Series: 4", "12 - 10 - 10 - 8");
+        insertaEnt("Pierna", "Elevación de gemelos", "Series: 4", "12 - 10 - 10 - 8");
+
+        insertaEjer("Press banca", "Pecho", "7aQY3u0Dk-Q");
+        insertaEjer("Press banca inclinado", "Pecho", "swMjJqFzxCQ");
+        insertaEjer("Press banca declinado", "Pecho", "NNz3_wUMrvI");
+        insertaEjer("Aperturas", "Pecho", "xyHdY99F640");
+        insertaEjer("Press militar", "Hombro", "j_Buh54Sb-w");
+        insertaEjer("Elevaciones laterales", "Hombro", "hgLpdwMtEEs");
+        insertaEjer("Elevación frontal", "Hombro", "qIxtugfMI-E");
+        insertaEjer("Elevación posterior", "Hombro", "zdLlyFb5YDI");
+        insertaEjer("Dominadas", "Espalda", "8mhDd9Ahl1M");
+        insertaEjer("Jalón al pecho", "Espalda", "xpIlNU4qZd8");
+        insertaEjer("Remo", "Espalda", "I8-nqk81gwI");
+        insertaEjer("Extensión lumbar", "Espalda", "Dd27xSYbjb8");
+        insertaEjer("Curl bíceps", "Bíceps", "V1qprKjuNV8");
+        insertaEjer("Curl estilo martillo", "Bíceps", "8ajGwhCkSss");
+        insertaEjer("Curl concentrado", "Bíceps", "E6idMdmNyxI");
+        insertaEjer("Fondos", "Tríceps", "1Vm1ATIi0AE");
+        insertaEjer("Extensiones con mancuernas", "Tríceps", "rIlb_t6SVf0");
+        insertaEjer("Polea tríceps", "Tríceps", "FspY_qJBXZc");
+        insertaEjer("Extensión cuádriceps", "Pierna", "r7ZMTzfiICA");
+        insertaEjer("Sentadilla", "Pierna", "0rgiePufo0A");
+        insertaEjer("Prensa", "Pierna", "bKcV1I5rB_g");
+        insertaEjer("Peso muerto", "Pierna", "7_Wm0YGQinw");
+        insertaEjer("Zancada", "Pierna", "U2lK6PaJ0kA");
+        insertaEjer("Curl femoral", "Pierna", "trEvYnS_tQg");
+        insertaEjer("Elevación de gemelos", "Pierna", "S5amyzoG1O4");
 
     }
 
-    private void insertaEjer(String nombre, String zona, String enlace, String ent) {
+    private void insertaEjer(String nombre, String zona, String enlace) {
         ContentValues values= new ContentValues();
         values.put("nombre", nombre);
         values.put("zona", zona);
         values.put("enlace", enlace);
-        values.put("nombreEntrenamiento", ent);
         db.insert("Ejercicios",null, values);
     }
 
-    private void insertaEnt(String nombre, int serie, int rep){
+    private void insertaEnt(String nombre, String ejer, String serie, String rep){
         ContentValues values = new ContentValues();
         values.put("nombreEntrenamiento", nombre);
+        values.put("nombreEjer", ejer);
         values.put("serie", serie);
         values.put("repeticiones", rep);
     }

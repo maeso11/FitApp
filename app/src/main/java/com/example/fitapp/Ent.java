@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class Ejer extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class Ent extends AppCompatActivity {
 
     Toolbar toolbar;
     SQLiteDatabase db;
@@ -31,20 +31,18 @@ public class Ejer extends AppCompatActivity implements AdapterView.OnItemClickLi
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejer);
+        setContentView(R.layout.activity_ent);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        titulo = findViewById(R.id.tituloEjer);
+        titulo = findViewById(R.id.tituloEnt);
 
         helper = new SQLiteHelper(this);
         db = helper.getReadableDatabase();
 
-        lv = findViewById(R.id.listaEjer);
+        lv = findViewById(R.id.listaEnt);
 
         consultaZona();
-
-        lv.setOnItemClickListener(this);
     }
 
     @Override
@@ -58,53 +56,33 @@ public class Ejer extends AppCompatActivity implements AdapterView.OnItemClickLi
         int id = item.getItemId();
 
         if (id == R.id.ejercicios){
-            Intent intent = new Intent(this, Ejercicios.class);
-            startActivity(intent);
+            Intent i = new Intent(this, Ejercicios.class);
+            startActivity(i);
         }else if (id == R.id.entrenamientos){
-            Intent intent = new Intent(this, Entrenamientos.class);
-            startActivity(intent);
+            Intent i = new Intent(this, Entrenamientos.class);
+            startActivity(i);
         }else{
-            Intent intent = new Intent(this, Inicio.class);
-            startActivity(intent);
+            Intent i = new Intent(this, Inicio.class);
+            startActivity(i);
         }
         return true;
     }
 
-    public void vistaEjercicio(){
-
-        startActivity(i);
-    }
-
     private void consultaZona() {
 
-        String nombreTitulo = getIntent().getStringExtra("zona");
-        titulo.setText(nombreTitulo);
-        String consulta = "zona = '" + getIntent().getStringExtra("zona") + "'";
+        String nombreEnt = getIntent().getStringExtra("nombreEntrenamiento");
+        titulo.setText(nombreEnt);
+        String consulta = "nombreEntrenamiento = '" + getIntent().getStringExtra("nombreEntrenamiento") + "'";
 
         Cursor cursor = db.query(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, null, consulta, null, null, null, null);
 
-        String[] from = {EstructuraBBDD.EstructuraEjercicios.COLUMN_NAME_NOMBREEJER};
-        int[] to = {R.id.nombreEjer};
+        String[] from = {EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_NOMBREEJER, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_SERIE, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_REP};
+        int[] to = {R.id.nombreEnt, R.id.series, R.id.reps};
 
-        SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this, R.layout.ejerlist, cursor, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+        SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this, R.layout.entlist, cursor, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
         lv.setAdapter(adaptador);
 
         db.close();
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> listView, View view, int position, long id) {
-        Cursor cursor = (Cursor) listView.getItemAtPosition(position);
-        int _id = cursor.getInt(0);
-        String nombre = cursor.getString(1);
-        String zona = cursor.getString(2);
-        String enlace = cursor.getString(3);
-        i = new Intent(this, DetalleEjer.class);
-        i.putExtra("idVideo", enlace);
-        i.putExtra("idNombre", nombre);
-        i.putExtra("idZona", zona);
-
-        vistaEjercicio();
     }
 
 }
