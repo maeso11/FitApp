@@ -71,10 +71,10 @@ public class Ent extends AppCompatActivity {
     private void consultaZona() {
 
         String nombreEnt = getIntent().getStringExtra("nombreEntrenamiento");
-        titulo.setText(nombreEnt);
+        //titulo.setText(nombreEnt);
         String consulta = "nombreEntrenamiento = '" + getIntent().getStringExtra("nombreEntrenamiento") + "'";
 
-        Cursor cursor = db.query(EstructuraBBDD.EstructuraEjercicios.TABLE_NAME_EJERCICIOS, null, consulta, null, null, null, null);
+        Cursor cursor = db.query(EstructuraBBDD.EstructuraEntrenamientos.TABLE_NAME_ENTRENAMIENTOS, null, consulta, null, null, null, null);
 
         String[] from = {EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_NOMBREEJER, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_SERIE, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_REP};
         int[] to = {R.id.nombreEnt, R.id.series, R.id.reps};
