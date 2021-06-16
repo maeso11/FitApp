@@ -42,7 +42,7 @@ public class Ent extends AppCompatActivity {
 
         lv = findViewById(R.id.listaEnt);
 
-        consultaZona();
+        consultaEnt();
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Ent extends AppCompatActivity {
         return true;
     }
 
-    private void consultaZona() {
+    private void consultaEnt() {
 
         String nombreEnt = getIntent().getStringExtra("nombreEntrenamiento");
         //titulo.setText(nombreEnt);
@@ -79,8 +79,8 @@ public class Ent extends AppCompatActivity {
         String[] from = {EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_NOMBREEJER, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_SERIE, EstructuraBBDD.EstructuraEntrenamientos.COLUMN_NAME_REP};
         int[] to = {R.id.nombreEnt, R.id.series, R.id.reps};
 
-        SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this, R.layout.entlist, cursor, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
-        lv.setAdapter(adaptador);
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.entlist, cursor, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+        lv.setAdapter(adapter);
 
         db.close();
     }

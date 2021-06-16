@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".MenuInicio">
 
     <ImageButton
@@ -51,5 +52,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:onClick="volver"
-        android:text="CERRAR SESION" />
+        android:text="CERRAR SESION"
+        app:backgroundTint="@color/black" />
 </RelativeLayout>

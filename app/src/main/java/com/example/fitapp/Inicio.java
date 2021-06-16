@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Inicio extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class Inicio extends AppCompatActivity {
     Button acceder;
     SQLiteDatabase db;
     SQLiteHelper helper;
+    EditText user;
+    EditText pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class Inicio extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        user = findViewById(R.id.edtAltura);
+        pass = findViewById(R.id.edtPeso);
 
         acceder = findViewById(R.id.btnEntrar);
         helper = new SQLiteHelper(this);
@@ -108,11 +115,21 @@ public class Inicio extends AppCompatActivity {
         values.put("nombreEjer", ejer);
         values.put("serie", serie);
         values.put("repeticiones", rep);
+        db.insert("Entrenamientos", null, values);
     }
 
     //Funciones desplazamiento entre vistas
     public void entrar (View view){
-        Intent i = new Intent(this, MenuInicio.class);
-        startActivity(i);
+        String usuario = "admin";
+        String contrasena = "a";
+        if (user.getText().toString().equals(usuario) && pass.getText().toString().equals(contrasena)){
+            Intent i = new Intent(this, MenuInicio.class);
+            startActivity(i);
+        }else{
+            Toast toast1 = Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT);
+
+            toast1.show();
+        }
+
     }
 }
