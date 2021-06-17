@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +34,7 @@ public class DetalleEjer extends YouTubeBaseActivity implements YouTubePlayer.On
         youTubePlayerView.initialize(clave, this);
 
         toolbar = findViewById(R.id.toolbar);
-        datos = findViewById(R.id.datos);
+        datos = findViewById(R.id.txtDatos);
         idVideo = getIntent().getStringExtra("idVideo");
         idNombre = getIntent().getStringExtra("idNombre");
         idZona = getIntent().getStringExtra("idZona");

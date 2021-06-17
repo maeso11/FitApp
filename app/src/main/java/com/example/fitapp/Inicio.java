@@ -1,6 +1,5 @@
 package com.example.fitapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -9,12 +8,9 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Inicio extends AppCompatActivity {
@@ -35,8 +31,8 @@ public class Inicio extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        user = findViewById(R.id.edtAltura);
-        pass = findViewById(R.id.edtPeso);
+        user = findViewById(R.id.edtUser);
+        pass = findViewById(R.id.edtPass);
 
         acceder = findViewById(R.id.btnEntrar);
         helper = new SQLiteHelper(this);

@@ -20,13 +20,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btnPechoTriceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="ent1"
-            android:text="Button" />
+            app:srcCompat="@drawable/iconoent1" />
 
     </LinearLayout>
 
@@ -36,7 +36,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtPecho"
+            android:id="@+id/txtPechoTriceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,13 +52,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btnEspaldaBiceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="ent2"
-            android:text="Button" />
+            app:srcCompat="@drawable/iconoent2" />
 
     </LinearLayout>
 
@@ -68,7 +68,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textEspaldaBiceps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,13 +84,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btnPierna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="ent3"
-            android:text="Button" />
+            app:srcCompat="@drawable/iconoent3" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -99,7 +100,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtPierna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -25,7 +25,7 @@
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/iconoejer" />
+            app:srcCompat="@drawable/iconoinicio" />
     </LinearLayout>
 
     <LinearLayout
@@ -33,15 +33,17 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/txtAltura"
+            android:id="@+id/txtUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="45sp"
+            android:layout_marginRight="45sp"
             android:text="USUARIO"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtAltura"
+            android:id="@+id/edtUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -58,15 +60,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtPeso"
+            android:id="@+id/txtPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CONTRASEÑA"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtPeso"
+            android:id="@+id/edtPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
